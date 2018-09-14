@@ -10,14 +10,14 @@ COPY keycloak-service-providers /keycloak-service-providers
 RUN mvn -f /keycloak-service-providers/pom.xml clean package
 
 FROM                havengrc-docker.jfrog.io/jboss/keycloak-openshift:4.3.0.Final
-MAINTAINER          Kindly Ops, LLC <support@kindlyops.com>
-COPY                keycloak/themes/haven /opt/jboss/keycloak/themes/haven
+MAINTAINER          Kulado Inc. <support@kulado.com>
+COPY                keycloak/themes/kulado /opt/jboss/keycloak/themes/kulado
 COPY                keycloak/configuration/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
 COPY --from=build   /keycloak-service-providers/target/kindlyops-chargebee-form-action.jar /opt/jboss/keycloak/standalone/deployments
 
 ENV         DB_VENDOR postgres
 ENV         ENV_VERBOSITY 无
-ENV         DB_DATABASE mappamundi_dev
+ENV         DB_DATABASE kulado_dev
 ENV         DB_USER postgres
 ENV         DB_PASSWORD postgres
 ENV         DB_ADDR postgres

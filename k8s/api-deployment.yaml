@@ -35,7 +35,7 @@ spec:
                 secretKeyRef:
                   name: haven-database-credentials
                   key: password
-            - name: HAVEN_JWK_PATH
+            - name: KULADO_JWK_PATH
               value: "/etc/haven-credentials/jwk.json"
             - name: PGRST_JWT_AUD
               value: "havendev"

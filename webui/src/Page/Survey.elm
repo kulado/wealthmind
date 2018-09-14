@@ -861,8 +861,8 @@ getTotalAvailableSurveys model =
 viewHero : Model -> Html Msg
 viewHero model =
     div [ class "" ]
-        [ h1 [ class "display-4" ] [ text "KindlyOps Haven Survey" ]
-        , p [ class "lead" ] [ text "Welcome to the Elm Haven Survey. " ]
+        [ h1 [ class "display-4" ] [ text "Kulado WealthMind Survey" ]
+        , p [ class "lead" ] [ text "Welcome to the Elm WealthMind Survey. " ]
         , button [ class "btn btn-secondary", onClick GetIpsativeSurveys ] [ text "get ipsative surveys (debug)" ]
         , button [ class "btn btn-secondary", onClick GetLikertSurveys ] [ text "get likert surveys (debug)" ]
         , hr [ class "my-4" ] []

@@ -20,7 +20,7 @@ server-proxy-uri = "$(PGRST_SERVER_PROXY_URI)"
 ## (use "@filename" to load from separate file)
 ## The contents of the key file for keycloak were retrieved from keycloak using:
 ## curl http://localhost:8080/auth/realms/havendev/protocol/openid-connect/certs | jq '.'
-jwt-secret = "@$(HAVEN_JWK_PATH)"
+jwt-secret = "@$(KULADO_JWK_PATH)"
 jwt-aud = "$(PGRST_JWT_AUD_CLAIM)"
 
 role-claim-key = ".resource_access.havendev.roles[0]"

@@ -18,16 +18,16 @@ container_image(
     env = {
         "DB_VENDOR" : "postgres",
         "ENV_VERBOSITY" : "无",
-        "DB_DATABASE" : "mappamundi_dev",
+        "DB_DATABASE" : "kulado_dev",
         "DB_USER" : "postgres",
         "DB_PASSWORD" : "postgres",
     }
-    labels = {"maintainer": "Kindly Ops, LLC <support@kindlyops.com>"},
+    labels = {"maintainer": "Kulado Inc. <support@kulado.com>"},
 )
 
 # FROM                havengrc-docker.jfrog.io/jboss/keycloak:4.0.0.Final
-# MAINTAINER          Kindly Ops, LLC <support@kindlyops.com>
-# COPY                keycloak/themes/haven /opt/jboss/keycloak/themes/haven
+# MAINTAINER          Kulado Inc. <support@kulado.com>
+# COPY                keycloak/themes/kulado /opt/jboss/keycloak/themes/kulado
 # COPY                keycloak/configuration/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
 # COPY --from=build   /keycloak-service-providers/target/kindlyops-chargebee-form-action.jar /opt/jboss/keycloak/standalone/deployments
 # USER root
@@ -40,7 +40,7 @@ container_image(
 # USER 1000
 # ENV         DB_VENDOR postgres
 # ENV         ENV_VERBOSITY 无
-# ENV         DB_DATABASE mappamundi_dev
+# ENV         DB_DATABASE kulado_dev
 # ENV         DB_USER postgres
 # ENV         DB_PASSWORD postgres
 # ENV         DB_ADDR postgres

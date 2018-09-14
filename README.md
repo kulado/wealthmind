@@ -1,4 +1,4 @@
-# Haven GRC is a modern risk & compliance dashboard for the cloud
+# WealthMind is a modern risk & compliance dashboard for the cloud
 
 [![CircleCI](https://circleci.com/gh/kindlyops/mappamundi.svg?style=svg)](https://circleci.com/gh/kindlyops/mappamundi) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/statik) [![Maintainability](https://api.codeclimate.com/v1/badges/d2af9dcd5ad434172a27/maintainability)](https://codeclimate.com/github/kindlyops/mappamundi/maintainability)
 
@@ -7,7 +7,7 @@ We use [BrowserStack](http://browserstack.com) to efficiently check cross-browse
 <!-- markdownlint-disable MD033 -->
 [<img height="53" src="https://p3.zdusercontent.com/attachment/1015988/xfvLD5CuyeUcq2i40RYcw494H?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..BvyIxRLJz4phFf7cbIr8_Q.Fl9BR-ARcgvq38p546lM4djFcalediYWQaXV1_U_xi_zr5stXNUKLQNkTt-2zQbXWIIffLSoG8dUSZqL-GsqaTMbBX8OZi14qIHWmBIOPoRmyhwIcQfYIa79ngad69fKDltmq2H2KKWLByI-NWE9ygYpNs2IAXOQ72NICuWLbSyXIDGFVsq5VlV5ok7iCY0WxwXzIAiHbFu_BPufmP951-dpnBIGJAl4KfGk0eSbHKDOYvVkqHU2yZvNL8itCqkThmE7WNgPCS_KL6TyQiPxUQ.0ypOzE6XBmafR82vKRcIKg">](http://browserstack.com/)
 
-## What is Haven GRC?
+## What is WealthMind?
 
 We help organizations avoid getting bogged down in rules that no longer make sense, and empower people to update practices to use modern tools and techniques without abandoning responsible oversight and administrative controls.
 
@@ -215,7 +215,7 @@ Branches merged to master will push new docker images to the OpenShift cluster.
 
 ### Using OpenShift
 
-Talk to your administrator about getting an OpenShift account set up. Once you have access to Kubernetes / OpenShift, you can use the `oc` command to interact with the platform and update Haven GRC deployments.
+Talk to your administrator about getting an OpenShift account set up. Once you have access to Kubernetes / OpenShift, you can use the `oc` command to interact with the platform and update WealthMind deployments.
 
 To get useful information to get oriented and find out what is happening:
 

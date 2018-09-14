@@ -93,7 +93,7 @@ services:
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
       - DATABASE_HOST=db
-      - HAVEN_JWK_PATH=/keycloak-dev-public-key.json
+      - KULADO_JWK_PATH=/keycloak-dev-public-key.json
       - PGRST_JWT_AUD_CLAIM=havendev
       - PGRST_SERVER_PROXY_URI=http://localhost:8180
     volumes:
@@ -132,7 +132,7 @@ services:
       - /go/src/github.com/kindlyops/mappamundi/havenapi/vendor
       - ./postgrest/keycloak-dev-public-key.json:/keycloak-dev-public-key.json
     environment:
-      - HAVEN_JWK_PATH=/keycloak-dev-public-key.json
+      - KULADO_JWK_PATH=/keycloak-dev-public-key.json
       - KC_ADMIN=admin
       - KC_PW=admin
       - KC_HOST=http://webui

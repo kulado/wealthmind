@@ -275,7 +275,7 @@ viewNavBar model =
                 []
             ]
         , div [ class "navbar-brand" ]
-            [ text "Haven GRC" ]
+            [ text "WealthMind" ]
         ]
 
 

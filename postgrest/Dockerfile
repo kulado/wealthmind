@@ -15,7 +15,7 @@ ENV         DATABASE_NAME mappamundi_dev
 ENV         DATABASE_USERNAME postgres
 ENV         DATABASE_PASSWORD postgres
 ENV         DATABASE_HOST postgres
-ENV         HAVEN_JWK_PATH /keycloak-dev-public-key.json
+ENV         KULADO_JWK_PATH /keycloak-dev-public-key.json
 ENV         PGRST_JWT_AUD_CLAIM havendev
 ENV         PGRST_SERVER_PROXY_URI http://localhost:8180
 EXPOSE 8180
