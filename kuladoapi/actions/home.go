@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gobuffalo/buffalo"
-	"github.com/kindlyops/mappamundi/havenapi/models"
+	"github.com/kulado/wealthmind/kuladoapi/models"
 )
 
 // HealthzHandler checks for a working DB connection

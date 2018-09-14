@@ -7,5 +7,5 @@ node_modules/
 .sass-cache/
 *-packr.go
 public/assets/
-havenapi
+kuladoapi
 .vscode/

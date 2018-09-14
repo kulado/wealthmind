@@ -1,4 +1,4 @@
 #!/bin/bash
 set -x
 docker-compose run apitest
-docker-compose run havenapi buffalo test
+docker-compose run kuladoapi buffalo test

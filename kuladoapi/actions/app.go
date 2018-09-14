@@ -19,7 +19,7 @@ import (
 	jose "gopkg.in/square/go-jose.v2"
 	jwt "gopkg.in/square/go-jose.v2/jwt"
 
-	"github.com/kindlyops/mappamundi/havenapi/models"
+	"github.com/kulado/wealthmind/kuladoapi/models"
 )
 
 // ENV is used to help switch settings based on where the
@@ -27,7 +27,7 @@ import (
 var ENV = envy.Get("GO_ENV", "development")
 
 // TODO mappamundi/postgrest/keycloak-dev-public-key.json should be
-// the JWK and will need to be mounted into the havenapi container
+// the JWK and will need to be mounted into the kuladoapi container
 var KEY = envy.Get("KULADO_JWK_PATH", "")
 
 var key jose.JSONWebKey
@@ -44,7 +44,7 @@ func App() *buffalo.App {
 			PreWares: []buffalo.PreWare{
 				cors.Default().Handler,
 			},
-			SessionName: "_havenapi_session",
+			SessionName: "_kuladoapi_session",
 		})
 
 		rawKey, err := ioutil.ReadFile(KEY)

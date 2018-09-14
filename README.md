@@ -184,7 +184,7 @@ To upload a base64 encoded file to the database via postgrest:
 
 We will need an upgraded version of postgrest with a fix for [this postgrest bug](https://github.com/begriffs/postgrest/issues/906). We also need to modify the user signup process to set up the roles correctly.
 
-To upload a file to the database via havenapi:
+To upload a file to the database via kuladoapi:
 
     curl -X POST -H "Authorization: Bearer $TOKEN" -F "name=filename.pdf" \
       -F "file=@apitest/features/minimal.pdf" \

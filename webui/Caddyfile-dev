@@ -30,7 +30,7 @@ proxy /api api:8180 {
   transparent
 }
 
-proxy /api/files havenapi:3000 {
+proxy /api/files kuladoapi:3000 {
   transparent
 }
 

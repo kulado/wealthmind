@@ -125,11 +125,11 @@ services:
       - "PGADMIN_DEFAULT_PASSWORD=password"
     ports:
       - "8081:80"
-  havenapi:
-    working_dir: /go/src/github.com/kindlyops/mappamundi/havenapi
+  kuladoapi:
+    working_dir: /go/src/github.com/kulado/wealthmind/kuladoapi
     volumes:
-      - ./havenapi:/go/src/github.com/kindlyops/mappamundi/havenapi
-      - /go/src/github.com/kindlyops/mappamundi/havenapi/vendor
+      - ./kuladoapi:/go/src/github.com/kulado/wealthmind/kuladoapi
+      - /go/src/github.com/kulado/wealthmind/kuladoapi/vendor
       - ./postgrest/keycloak-dev-public-key.json:/keycloak-dev-public-key.json
     environment:
       - KULADO_JWK_PATH=/keycloak-dev-public-key.json
@@ -139,7 +139,7 @@ services:
       - KC_PORT=2016
     build:
       context: .
-      dockerfile: ./havenapi/Dockerfile-hotreload
+      dockerfile: ./kuladoapi/Dockerfile-hotreload
     links:
       - db
     ports:
@@ -154,7 +154,7 @@ services:
       dockerfile: ./webui/Dockerfile-hotreload
     links:
       - api
-      - havenapi
+      - kuladoapi
       - keycloak
     ports:
       - "2015:2016"

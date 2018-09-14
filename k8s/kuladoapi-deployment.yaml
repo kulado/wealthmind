@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: havenapi
+  name: kuladoapi
 spec:
   replicas: 1
   template:
@@ -10,11 +10,11 @@ spec:
       annotations:
         alpha.image.policy.openshift.io/resolve-names: '*'
       labels:
-        service: havenapi
+        service: kuladoapi
     spec:
       containers:
-        - name: havenapi
-          image: havengrc-docker.jfrog.io/kindlyops/havenapi:latest
+        - name: kuladoapi
+          image: havengrc-docker.jfrog.io/kindlyops/kuladoapi:latest
           env:
             - name: GO_ENV
               value: "production"
