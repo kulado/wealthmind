@@ -48,7 +48,7 @@ services:
       - db:postgres
       - mailhog
     volumes:
-      - ./keycloak/themes/haven:/opt/jboss/keycloak/themes/haven
+      - ./keycloak/themes/kulado:/opt/jboss/keycloak/themes/kulado
       - ./keycloak/data:/keycloak
     command: ["start-keycloak.sh", "-b", "0.0.0.0", "-Dkeycloak.migration.file=/keycloak/kuladodev-realm.json", "-Dkeycloak.migration.strategy=IGNORE_EXISTING", "-Dkeycloak.migration.provider=singleFile", "-Dkeycloak.migration.action=import"]
   flyway:

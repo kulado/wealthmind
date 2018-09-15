@@ -17,7 +17,7 @@ COPY --from=build   /keycloak-service-providers/target/kindlyops-chargebee-form-
 
 ENV         DB_VENDOR postgres
 ENV         ENV_VERBOSITY 无
-ENV         DB_DATABASE kulado_dev
+ENV         DB_DATABASE wealthmind_dev
 ENV         DB_USER postgres
 ENV         DB_PASSWORD postgres
 ENV         DB_ADDR postgres
