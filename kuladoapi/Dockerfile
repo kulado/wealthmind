@@ -16,17 +16,17 @@ RUN buffalo build --static -o /bin/app
 FROM alpine
 RUN apk add --no-cache bash
 RUN apk add --no-cache ca-certificates
-RUN addgroup -S havenuser && adduser -S -g havenuser havenuser && chown -R havenuser:havenuser /home/havenuser
+RUN addgroup -S azureuser && adduser -S -g azureuser azureuser && chown -R azureuser:azureuser /home/azureuser
 # Comment out to run the binary in "production" mode:
 # ENV GO_ENV=production
 
-WORKDIR /home/havenuser
+WORKDIR /home/azureuser
 
 COPY --from=builder /bin/app .
-RUN chown -R havenuser:havenuser /home/havenuser
-RUN chgrp -R 0 /home/havenuser &&chmod -R g=u /home/havenuser
+RUN chown -R azureuser:azureuser /home/azureuser
+RUN chgrp -R 0 /home/azureuser &&chmod -R g=u /home/azureuser
 EXPOSE 3000
 
 # Comment out to run the migrations before running the binary:
 # CMD /bin/app migrate; /bin/app
-CMD exec /home/havenuser/app
+CMD exec /home/azureuser/app

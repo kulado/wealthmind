@@ -58,7 +58,7 @@
         "realm" : [ "create-realm" ],
         "client" : {
           "master-realm" : [ "view-events", "manage-identity-providers", "manage-authorization", "query-clients", "query-realms", "view-authorization", "manage-users", "impersonation", "create-client", "manage-realm", "view-identity-providers", "query-users", "view-clients", "manage-clients", "manage-events", "query-groups", "view-realm", "view-users" ],
-          "havendev-realm" : [ "create-client", "view-clients", "view-identity-providers", "query-groups", "manage-clients", "manage-events", "manage-authorization", "query-clients", "manage-users", "view-authorization", "view-events", "view-realm", "manage-realm", "impersonation", "view-users", "manage-identity-providers", "query-users", "query-realms" ]
+          "kuladodev-realm" : [ "create-client", "view-clients", "view-identity-providers", "query-groups", "manage-clients", "manage-events", "manage-authorization", "query-clients", "manage-users", "view-authorization", "view-events", "view-realm", "manage-realm", "impersonation", "view-users", "manage-identity-providers", "query-users", "query-realms" ]
         }
       },
       "clientRole" : false,
@@ -219,7 +219,7 @@
         "clientRole" : true,
         "containerId" : "75a2029d-cd52-43de-9536-06d35b6200c8"
       } ],
-      "havendev-realm" : [ {
+      "kuladodev-realm" : [ {
         "id" : "26ef3b31-3ccc-43a8-b3a1-9ea7621a439f",
         "name" : "create-client",
         "description" : "${role_create-client}",
@@ -240,7 +240,7 @@
         "composite" : true,
         "composites" : {
           "client" : {
-            "havendev-realm" : [ "query-clients" ]
+            "kuladodev-realm" : [ "query-clients" ]
           }
         },
         "clientRole" : true,
@@ -322,7 +322,7 @@
         "composite" : true,
         "composites" : {
           "client" : {
-            "havendev-realm" : [ "query-groups", "query-users" ]
+            "kuladodev-realm" : [ "query-groups", "query-users" ]
           }
         },
         "clientRole" : true,
@@ -745,8 +745,8 @@
     "optionalClientScopes" : [ "address", "phone", "offline_access" ]
   }, {
     "id" : "f324ac03-131f-4ad8-94e1-6bd0f7831bef",
-    "clientId" : "havendev-realm",
-    "name" : "havendev Realm",
+    "clientId" : "kuladodev-realm",
+    "name" : "kuladodev Realm",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "clientAuthenticatorType" : "client-secret",
@@ -1892,8 +1892,8 @@
   "keycloakVersion" : "4.0.0.Final",
   "userManagedAccessAllowed" : false
 }, {
-  "id" : "havendev",
-  "realm" : "havendev",
+  "id" : "kuladodev",
+  "realm" : "kuladodev",
   "displayName" : "WealthMind Beta",
   "displayNameHtml" : "WealthMind Secure Access",
   "notBefore" : 0,
@@ -1934,14 +1934,14 @@
       "description" : "${role_offline-access}",
       "composite" : false,
       "clientRole" : false,
-      "containerId" : "havendev"
+      "containerId" : "kuladodev"
     }, {
       "id" : "5f1880d1-6d77-4498-8994-6fea5337a67f",
       "name" : "uma_authorization",
       "description" : "${role_uma_authorization}",
       "composite" : false,
       "clientRole" : false,
-      "containerId" : "havendev"
+      "containerId" : "kuladodev"
     } ],
     "client" : {
       "realm-management" : [ {
@@ -2095,7 +2095,7 @@
       } ],
       "security-admin-console" : [ ],
       "admin-cli" : [ ],
-      "havendev" : [ {
+      "kuladodev" : [ {
         "id" : "e022e30f-8a9e-48e9-b6f6-c42d4273dd42",
         "name" : "admin",
         "description" : "role for org admin",
@@ -2189,7 +2189,7 @@
     } ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
-      "havendev" : [ "member" ],
+      "kuladodev" : [ "member" ],
       "account" : [ "view-profile", "manage-account" ]
     },
     "notBefore" : 0,
@@ -2220,7 +2220,7 @@
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
-      "havendev" : [ "member" ],
+      "kuladodev" : [ "member" ],
       "account" : [ "manage-account", "view-profile" ]
     },
     "notBefore" : 0,
@@ -2254,7 +2254,7 @@
     "requiredActions" : [ ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
-      "havendev" : [ "member" ],
+      "kuladodev" : [ "member" ],
       "account" : [ "manage-account", "view-profile" ]
     },
     "notBefore" : 0,
@@ -2288,7 +2288,7 @@
     "requiredActions" : [ "CONFIGURE_TOTP" ],
     "realmRoles" : [ "offline_access", "uma_authorization" ],
     "clientRoles" : {
-      "havendev" : [ "member" ],
+      "kuladodev" : [ "member" ],
       "account" : [ "manage-account", "view-profile" ]
     },
     "notBefore" : 0,
@@ -2302,13 +2302,13 @@
     "id" : "2a3f57d1-8bdb-43b3-ab45-2709c0214439",
     "clientId" : "account",
     "name" : "${client_account}",
-    "baseUrl" : "/auth/realms/havendev/account",
+    "baseUrl" : "/auth/realms/kuladodev/account",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "7bd7eb69-f638-4f0f-80bc-c49c7f0583cf",
     "defaultRoles" : [ "view-profile", "manage-account" ],
-    "redirectUris" : [ "/auth/realms/havendev/account/*" ],
+    "redirectUris" : [ "/auth/realms/kuladodev/account/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -2617,7 +2617,7 @@
     "optionalClientScopes" : [ "address", "phone", "offline_access" ]
   }, {
     "id" : "02f6b754-9ed8-4254-adbd-8a1f845b1ac7",
-    "clientId" : "havendev",
+    "clientId" : "kuladodev",
     "rootUrl" : "",
     "adminUrl" : "http://localhost:2015/",
     "surrogateAuthRequired" : false,
@@ -2850,12 +2850,12 @@
     "id" : "c9a7d308-d907-41ae-a530-21ce896eec8a",
     "clientId" : "security-admin-console",
     "name" : "${client_security-admin-console}",
-    "baseUrl" : "/auth/admin/havendev/console/index.html",
+    "baseUrl" : "/auth/admin/kuladodev/console/index.html",
     "surrogateAuthRequired" : false,
     "enabled" : true,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "6cae6b16-4de1-4aa7-88b6-7dd0efa81b17",
-    "redirectUris" : [ "/auth/admin/havendev/console/*" ],
+    "redirectUris" : [ "/auth/admin/kuladodev/console/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,

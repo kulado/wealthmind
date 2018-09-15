@@ -79,21 +79,21 @@ func App() *buffalo.App {
 	return app
 }
 
-// Token is for un marshalling {"resource_access":{"havendev":{"roles":["member"]}}
+// Token is for un marshalling {"resource_access":{"kuladodev":{"roles":["member"]}}
 type Token struct {
 	ResourceAccess struct {
 		Client struct {
 			Roles []string `json:"roles,omitempty"`
-		} `json:"havendev,omitempty"`
+		} `json:"kuladodev,omitempty"`
 	} `json:"resource_access,omitempty"`
 }
 
 func getRole(allClaims map[string]interface{}) string {
 	// look for the role that we should assume
-	// {"resource_access":{"havendev":{"roles":["member"]}}
+	// {"resource_access":{"kuladodev":{"roles":["member"]}}
 	access := allClaims["resource_access"].(map[string]interface{})
-	havendev := access["havendev"].(map[string]interface{})
-	roles := havendev["roles"].([]interface{})
+	kuladodev := access["kuladodev"].(map[string]interface{})
+	roles := kuladodev["roles"].([]interface{})
 	var role string
 	for _, r := range roles {
 		switch r.(string) {
@@ -140,7 +140,7 @@ func JwtMiddleware(next buffalo.Handler) buffalo.Handler {
 
 		// check if token is expired and from a valid issuer
 		// TODO: the issuer needs to be configurable to handle on-prem deployments
-		iss := "http://localhost:2015/auth/realms/havendev"
+		iss := "http://localhost:2015/auth/realms/kuladodev"
 		err = validClaims.Validate(jwt.Expected{Issuer: iss})
 		if err != nil {
 			return c.Error(401, fmt.Errorf("invalid token: %s", err.Error()))

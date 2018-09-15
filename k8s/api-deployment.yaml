@@ -38,7 +38,7 @@ spec:
             - name: KULADO_JWK_PATH
               value: "/etc/haven-credentials/jwk.json"
             - name: PGRST_JWT_AUD
-              value: "havendev"
+              value: "kuladodev"
             - name: PGRST_JWT_SECRET
               value: "/haven-credentials/jwk.json"
             - name: PGRST_SERVER_PORT

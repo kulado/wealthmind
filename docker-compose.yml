@@ -50,7 +50,7 @@ services:
     volumes:
       - ./keycloak/themes/haven:/opt/jboss/keycloak/themes/haven
       - ./keycloak/data:/keycloak
-    command: ["start-keycloak.sh", "-b", "0.0.0.0", "-Dkeycloak.migration.file=/keycloak/havendev-realm.json", "-Dkeycloak.migration.strategy=IGNORE_EXISTING", "-Dkeycloak.migration.provider=singleFile", "-Dkeycloak.migration.action=import"]
+    command: ["start-keycloak.sh", "-b", "0.0.0.0", "-Dkeycloak.migration.file=/keycloak/kuladodev-realm.json", "-Dkeycloak.migration.strategy=IGNORE_EXISTING", "-Dkeycloak.migration.provider=singleFile", "-Dkeycloak.migration.action=import"]
   flyway:
     build:
       context: flyway/
@@ -94,7 +94,7 @@ services:
       - DATABASE_PASSWORD=postgres
       - DATABASE_HOST=db
       - KULADO_JWK_PATH=/keycloak-dev-public-key.json
-      - PGRST_JWT_AUD_CLAIM=havendev
+      - PGRST_JWT_AUD_CLAIM=kuladodev
       - PGRST_SERVER_PROXY_URI=http://localhost:8180
     volumes:
       - ./postgrest/keycloak-dev-public-key.json:/keycloak-dev-public-key.json
@@ -160,7 +160,7 @@ services:
       - "2015:2016"
     command: [/code/installrun.sh]
     environment:
-      - ELM_APP_KEYCLOAK_CLIENT_ID=havendev
+      - ELM_APP_KEYCLOAK_CLIENT_ID=kuladodev
   docs:
     working_dir: /docs
     volumes:

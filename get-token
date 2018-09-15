@@ -4,4 +4,4 @@ USERNAME=${KULADO_USERNAME:-user1@havengrc.com}
 PASSWORD=${KULADO_PASSWORD:-password}
 #SERVER=${1:-https://staging.havengrc.com}
 SERVER=${1:-http://localhost:2015}
-curl -s --data "grant_type=password&client_id=havendev&scope=openid&username=$USERNAME&password=$PASSWORD" $SERVER/auth/realms/havendev/protocol/openid-connect/token | jq -r '.access_token'
+curl -s --data "grant_type=password&client_id=kuladodev&scope=openid&username=$USERNAME&password=$PASSWORD" $SERVER/auth/realms/kuladodev/protocol/openid-connect/token | jq -r '.access_token'

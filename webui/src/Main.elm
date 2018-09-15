@@ -348,7 +348,7 @@ viewNavUser model user =
                 [ text (user.firstName ++ " ")
                 ]
             , div [ attribute "aria-labelledby" "navbarDropdown", class "dropdown-menu dropdown-menu-right" ]
-                [ a [ class "dropdown-item", href "/auth/realms/havendev/account/" ]
+                [ a [ class "dropdown-item", href "/auth/realms/kuladodev/account/" ]
                     [ text "Profile" ]
                 , div [ class "dropdown-divider" ]
                     []

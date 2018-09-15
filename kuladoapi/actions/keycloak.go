@@ -39,7 +39,7 @@ var adminUser = os.Getenv("KC_ADMIN")
 var adminPw = os.Getenv("KC_PW")
 var keycloakHost = os.Getenv("KC_HOST") + ":" + os.Getenv("KC_PORT")
 var getTokenURL = "/auth/realms/master/protocol/openid-connect/token"
-var getUsersURL = "/auth/admin/realms/havendev/users"
+var getUsersURL = "/auth/admin/realms/kuladodev/users"
 
 // KeycloakGetToken grabs the token for the admin api.
 func KeycloakGetToken() error {

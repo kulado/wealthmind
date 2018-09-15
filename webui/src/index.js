@@ -10,8 +10,8 @@ if (process.env.NODE_ENV === 'development') {
 /* global Keycloak */
 var keycloak = Keycloak({
   url: '/auth',
-  realm: 'havendev',
-  clientId: 'havendev'
+  realm: 'kuladodev',
+  clientId: 'kuladodev'
 })
 
 var storedProfile = sessionStorage.getItem('profile')
@@ -96,8 +96,15 @@ elmApp.ports.keycloakLogout.subscribe(function () {
 
 // set the page title
 elmApp.ports.setTitle.subscribe(function (title) {
-  document.title = title
-})
+  document.title = title}
+  async src="https://www.googletagmanager.com/gtag/js?id=UA-125860589-1"
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+  dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'UA-125860589-1')
+)
 
 elmApp.ports.showError.subscribe(function (messageString) {
   console.error(messageString)

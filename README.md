@@ -83,7 +83,7 @@ After keycloak is running and you have made any desired config changes:
     docker-compose exec keycloak /opt/jboss/keycloak/bin/standalone.sh \
       -Dkeycloak.migration.action=export \
       -Dkeycloak.migration.provider=singleFile \
-      -Dkeycloak.migration.file=/keycloak/havendev-realm.json \
+      -Dkeycloak.migration.file=/keycloak/kuladodev-realm.json \
       -Djboss.http.port=8888 \
       -Djboss.https.port=9999 \
       -Djboss.management.http.port=7777
@@ -158,8 +158,8 @@ Multi-tenancy is still a work in progress. Initially we will use a single Keyclo
 In order to be able to get a token for a user, the user must have no pending actions in keycloak (like email verification or password change). To exchange a username and password for a Keycloak JWT token with curl:
 
     TOKEN=`curl -s --data \
-    "grant_type=password&client_id=havendev&scope=openid&username=user1@havengrc.com&password=password"\
-    http://localhost:2015/auth/realms/havendev/protocol/openid-connect/token \
+    "grant_type=password&client_id=kuladodev&scope=openid&username=user1@havengrc.com&password=password"\
+    http://localhost:2015/auth/realms/kuladodev/protocol/openid-connect/token \
     | jq -r '.access_token'`
 
 We also have a shortcut helper script you can use
@@ -255,7 +255,7 @@ There must also be secrets set up with the DB credentials.
 
 ### TLS
 
-You can provision certificates from Let's Encrypt in manual mode with certbot. The key material should be stored in a k8s secret which the havenweb pod loads as a volume so that Caddy can serve the certificate.
+You can provision certificates from Let's Encrypt in manual mode with certbot. The key material should be stored in a k8s secret which the kuladoweb pod loads as a volume so that Caddy can serve the certificate.
 
     certbot certonly --manual --preferred-challenge=dns
 

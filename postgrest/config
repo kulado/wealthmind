@@ -19,11 +19,11 @@ server-proxy-uri = "$(PGRST_SERVER_PROXY_URI)"
 ## choose a secret to enable JWT auth
 ## (use "@filename" to load from separate file)
 ## The contents of the key file for keycloak were retrieved from keycloak using:
-## curl http://localhost:8080/auth/realms/havendev/protocol/openid-connect/certs | jq '.'
+## curl http://localhost:8080/auth/realms/kuladodev/protocol/openid-connect/certs | jq '.'
 jwt-secret = "@$(KULADO_JWK_PATH)"
 jwt-aud = "$(PGRST_JWT_AUD_CLAIM)"
 
-role-claim-key = ".resource_access.havendev.roles[0]"
+role-claim-key = ".resource_access.kuladodev.roles[0]"
 
 # secret-is-base64 = false
 

@@ -2,7 +2,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: havenweb
+  name: kuladoweb
 spec:
   replicas: 1
   template:
@@ -10,14 +10,14 @@ spec:
       annotations:
         alpha.image.policy.openshift.io/resolve-names: '*'
       labels:
-        service: havenweb
+        service: kuladoweb
     spec:
       containers:
-        - name: havenweb
+        - name: kuladoweb
           image: havengrc-docker.jfrog.io/kindlyops/havenweb:latest
           env:
             - name: ELM_APP_KEYCLOAK_CLIENT_ID
-              value: "havendev"
+              value: "kuladodev"
           ports:
             - containerPort: 8443
               protocol: TCP
