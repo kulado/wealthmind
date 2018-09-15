@@ -35,7 +35,7 @@ services:
       context: .
       dockerfile: ./keycloak/Dockerfile
     environment:
-      - DB_DATABASE=mappamundi_dev
+      - DB_DATABASE=wealthmind_dev
       - DB_USER=postgres
       - DB_PASSWORD=postgres
       - DB_ADDR=postgres
@@ -57,7 +57,7 @@ services:
     volumes:
       - ./flyway/sql:/flyway/sql
     environment:
-      - FLYWAY_URL=jdbc:postgresql://db/mappamundi_dev
+      - FLYWAY_URL=jdbc:postgresql://db/wealthmind_dev
       - FLYWAY_USER=postgres
       - FLYWAY_PASSWORD=postgres
       - FLYWAY_IGNORE_MISSING_MIGRATIONS=true
@@ -89,7 +89,7 @@ services:
       context: .
     command: [postgrest, "/config"]
     environment:
-      - DATABASE_NAME=mappamundi_dev
+      - DATABASE_NAME=wealthmind_dev
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
       - DATABASE_HOST=db
@@ -115,7 +115,7 @@ services:
     ports:
       - "5434:5432"
     environment:
-      - POSTGRES_DB=mappamundi_dev
+      - POSTGRES_DB=wealthmind_dev
     volumes:
       - ./postgresql-data:/var/lib/postgresql
   pgadmin:

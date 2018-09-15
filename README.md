@@ -1,6 +1,6 @@
 # WealthMind is a modern risk & compliance dashboard for the cloud
 
-[![CircleCI](https://circleci.com/gh/kindlyops/mappamundi.svg?style=svg)](https://circleci.com/gh/kindlyops/mappamundi) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/statik) [![Maintainability](https://api.codeclimate.com/v1/badges/d2af9dcd5ad434172a27/maintainability)](https://codeclimate.com/github/kindlyops/mappamundi/maintainability)
+[![CircleCI](https://circleci.com/gh/kulado/wealthmind.svg?style=svg)](https://circleci.com/gh/kulado/wealthmind) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/statik) [![Maintainability](https://api.codeclimate.com/v1/badges/d2af9dcd5ad434172a27/maintainability)](https://codeclimate.com/github/kulado/wealthmind/maintainability)
 
 We use [BrowserStack](http://browserstack.com) to efficiently check cross-browser compatibility while building Haven. We are using snyk.io and codeclimate.com for static scanning.
 
@@ -125,7 +125,7 @@ CREATE TABLE mappa.foo
 
 The psql client is installed in the flyway image, and can connect to the DB server running in the database container.
 
-    docker-compose run --entrypoint="psql -h db -U postgres mappamundi_dev" flyway
+    docker-compose run --entrypoint="psql -h db -U postgres wealthmind_dev" flyway
     \l                          # list databases in this server
     \dn                         # show the schemas
     \dt mappa.*                 # show the tables in the mappa schema

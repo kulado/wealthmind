@@ -1,4 +1,4 @@
--- Deploy mappamundi:dev to pg
+-- Deploy wealthmind:dev to pg
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 

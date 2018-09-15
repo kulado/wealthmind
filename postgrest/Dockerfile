@@ -11,7 +11,7 @@ RUN chown -R azureuser:0 /config && \
 	chmod -R g+rw /tmp
 USER 1000
 ENV         ENV_VERBOSITY 无
-ENV         DATABASE_NAME mappamundi_dev
+ENV         DATABASE_NAME wealthmind_dev
 ENV         DATABASE_USERNAME postgres
 ENV         DATABASE_PASSWORD postgres
 ENV         DATABASE_HOST postgres

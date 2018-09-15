@@ -1,4 +1,4 @@
--- Deploy mappamundi:roles to pg
+-- Deploy wealthmind:roles to pg
 
 DO $$
 BEGIN

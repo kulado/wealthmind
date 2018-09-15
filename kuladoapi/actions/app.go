@@ -26,7 +26,7 @@ import (
 // application is being run. Default is "development".
 var ENV = envy.Get("GO_ENV", "development")
 
-// TODO mappamundi/postgrest/keycloak-dev-public-key.json should be
+// TODO wealthmind/postgrest/keycloak-dev-public-key.json should be
 // the JWK and will need to be mounted into the kuladoapi container
 var KEY = envy.Get("KULADO_JWK_PATH", "")
 

@@ -1,4 +1,4 @@
--- Deploy mappamundi:files to pg
+-- Deploy wealthmind:files to pg
 
 -- for these three columns we never let the caller control the contents
 CREATE OR REPLACE FUNCTION mappa.func_override_file_columns()

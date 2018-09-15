@@ -1,6 +1,6 @@
 # The following dependencies were calculated from:
 #
-# generate_workspace --maven_project=/Users/emurphy/go/src/github.com/kindlyops/mappamundi/keycloak-service-providers --artifact=groupId:org.kindlyops.providers:0.1.0 --repositories=https://jcenter.bintray.com
+# generate_workspace --maven_project=/Users/eric/go/src/github.com/kulado/wealthmind/keycloak-service-providers --artifact=groupId:org.kindlyops.providers:0.1.0 --repositories=https://jcenter.bintray.com
 
 
 def generated_maven_jars():
