@@ -63,5 +63,5 @@ Thanks for your contributions!
 
 Note that proposing a change does not obligate the project to accept your
 change, and not all changes can be accepted. If you need help implementing
-WealthMind in an organization, consider hiring [Kindly Ops](https://kindlyops.com)
+WealthMind in an organization, consider hiring [Kulado Inc.](https://kulado.com)
 in order to support the project.

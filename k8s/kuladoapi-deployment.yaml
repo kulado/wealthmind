@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kuladoapi
-          image: havengrc-docker.jfrog.io/kindlyops/kuladoapi:latest
+          image: kulado.azurecr.io/wealthmind/kuladoapi:latest
           env:
             - name: GO_ENV
               value: "production"

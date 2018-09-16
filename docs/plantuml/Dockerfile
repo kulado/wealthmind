@@ -1,5 +1,5 @@
-FROM havengrc-docker.jfrog.io/openjdk:8u121-jre-alpine
-MAINTAINER Kindly Ops, LLC <support@kindlyops.com>
+FROM kulado.azurecr.io/openjdk:8u121-jre-alpine
+MAINTAINER Kulado Inc. <support@kindlyops.com>
 
 ENV PLANTUML_VERSION 8055
 ENV LANG en_US.UTF-8

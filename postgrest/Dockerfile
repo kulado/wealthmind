@@ -1,5 +1,5 @@
-FROM        havengrc-docker.jfrog.io/postgrest/postgrest:v0.5.0.0
-MAINTAINER  Kindly Ops, LLC <support@kindlyops.com>
+FROM        kulado.azurecr.io/postgrest/postgrest:v0.5.0.0
+MAINTAINER  Kulado Inc. <support@kindlyops.com>
 COPY        postgrest/config /config
 USER root
 RUN addgroup --system azureuser && adduser --system azureuser && adduser azureuser azureuser

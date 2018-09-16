@@ -2,7 +2,7 @@ Feature: Basic sqitch API interaction with file storage
 
     Background: Setup environment with JWT Auth
         Given I send and accept JSON
-        And I sign in to keycloak with "user1@havengrc.com" and "password"
+        And I sign in to keycloak with "demo@wealthmind.net" and "password"
         And I add Headers:
             | Prefer | return=representation             |
 

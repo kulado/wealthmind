@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: flyway-migrate
-        image: havengrc-docker.jfrog.io/kindlyops/havenflyway:latest
+        image: kulado.azurecr.io/wealthmind/kuladoflyway:latest
         command:
           - "/usr/local/bin/flyway"
           - "migrate"

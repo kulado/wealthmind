@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kuladoweb
-          image: havengrc-docker.jfrog.io/kindlyops/havenweb:latest
+          image: kulado.azurecr.io/wealthmind/kuladoweb:latest
           env:
             - name: ELM_APP_KEYCLOAK_CLIENT_ID
               value: "kuladodev"

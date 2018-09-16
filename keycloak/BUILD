@@ -25,7 +25,7 @@ container_image(
     labels = {"maintainer": "Kulado Inc. <support@kulado.com>"},
 )
 
-# FROM                havengrc-docker.jfrog.io/jboss/keycloak:4.0.0.Final
+# FROM                kulado.azurecr.io/jboss/keycloak:4.0.0.Final
 # MAINTAINER          Kulado Inc. <support@kulado.com>
 # COPY                keycloak/themes/kulado /opt/jboss/keycloak/themes/kulado
 # COPY                keycloak/configuration/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml

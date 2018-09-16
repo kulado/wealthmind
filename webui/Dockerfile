@@ -1,5 +1,5 @@
 FROM        alpine
-MAINTAINER  Kindly Ops, LLC <support@kindlyops.com>
+MAINTAINER  Kulado Inc. <support@kindlyops.com>
 RUN apk add --no-cache bash
 RUN apk add --no-cache ca-certificates
 RUN addgroup -S azureuser && adduser -S -g azureuser azureuser

@@ -1,5 +1,5 @@
-FROM        havengrc-docker.jfrog.io/boxfuse/flyway:5.0.7-alpine
-MAINTAINER  Kindly Ops, LLC <support@kindlyops.com>
+FROM        kulado.azurecr.io/boxfuse/flyway:5.0.7-alpine
+MAINTAINER  Kulado Inc. <support@kindlyops.com>
 RUN addgroup -S azureuser && adduser -S -g azureuser azureuser
 RUN apk add --no-cache postgresql-client
 WORKDIR /home/azureuser

@@ -22,7 +22,7 @@ container_repositories()
 
 container_pull(
     name = "keycloak_base",
-    registry = "havengrc-docker.jfrog.io",
+    registry = "kulado.azurecr.io",
     repository = "jboss/keycloak",
     tag = "4.3.0.Final",
 )

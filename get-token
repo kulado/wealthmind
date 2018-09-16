@@ -2,6 +2,6 @@
 
 USERNAME=${KULADO_USERNAME:-demo@wealthmind.net}
 PASSWORD=${KULADO_PASSWORD:-password}
-#SERVER=${1:-https://staging.havengrc.com}
+#SERVER=${1:-https://dashboard.wealthmind.net}
 SERVER=${1:-http://localhost:2015}
 curl -s --data "grant_type=password&client_id=kuladodev&scope=openid&username=$USERNAME&password=$PASSWORD" $SERVER/auth/realms/kuladodev/protocol/openid-connect/token | jq -r '.access_token'

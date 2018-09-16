@@ -1,5 +1,5 @@
-FROM        havengrc-docker.jfrog.io/node:8.4
-MAINTAINER  Kindly Ops, LLC <support@kindlyops.com>
+FROM        kulado.azurecr.io/node:8.4
+MAINTAINER  Kulado Inc. <support@kindlyops.com>
 RUN mkdir /code
 WORKDIR /code
 COPY ./webui/package.json /code

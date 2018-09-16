@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: havengrc-docker.jfrog.io/kindlyops/postgrest:latest
+          image: kulado.azurecr.io/wealthmind/postgrest:latest
           args:
           - postgrest
           - /config
@@ -44,7 +44,7 @@ spec:
             - name: PGRST_SERVER_PORT
               value: "8180"
             - name: PGRST_SERVER_PROXY_URI
-              value: "https://staging.havengrc.com/api"
+              value: "https://dashboard.wealthmind.net/api"
           volumeMounts:
             - name: secret-volume
               mountPath: /etc/kulado-credentials/

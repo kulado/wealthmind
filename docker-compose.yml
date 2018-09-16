@@ -105,7 +105,7 @@ services:
     depends_on:
       - flyway
   swagger:
-    image: havengrc-docker.jfrog.io/swaggerapi/swagger-ui:v3.0.2
+    image: kulado.azurecr.io/swaggerapi/swagger-ui:v3.0.2
     ports:
       - "3002:8080"
     volumes:
