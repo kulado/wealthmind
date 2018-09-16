@@ -497,7 +497,7 @@
                 <cacheThemes>false</cacheThemes>
                 <cacheTemplates>false</cacheTemplates>
                 <dir>${jboss.home.dir}/themes</dir>
-                <welcomeTheme>haven</welcomeTheme>
+                <welcomeTheme>kulado</welcomeTheme>
             </theme>
             <spi name="eventsStore">
                 <provider name="jpa" enabled="true">

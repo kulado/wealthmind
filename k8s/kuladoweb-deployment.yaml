@@ -33,7 +33,7 @@ spec:
       volumes:
         - name: secret-volume
           secret:
-            secretName: haven-tls
+            secretName: kulado-tls
       restartPolicy: Always
   strategy:
     type: "Recreate"

@@ -16,7 +16,7 @@ spec:
         command:
           - "/usr/local/bin/flyway"
           - "migrate"
-          - "-placeholders.databaseUser=havenprod"
+          - "-placeholders.databaseUser=kuladoprod"
         env:
           - name: FLYWAY_IGNORE_MISSING_MIGRATIONS
             value: "true"
@@ -25,15 +25,15 @@ spec:
           - name: FLYWAY_SCHEMAS
             value: "mappa,1"
           - name: FLYWAY_URL
-            value: "jdbc:postgresql://db/havenstage"
+            value: "jdbc:postgresql://db/kuladostage"
           - name: FLYWAY_USER
             valueFrom:
               secretKeyRef:
-                name: haven-database-credentials
+                name: kulado-database-credentials
                 key: username
           - name: FLYWAY_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: haven-database-credentials
+                name: kulado-database-credentials
                 key: password
       restartPolicy: Never

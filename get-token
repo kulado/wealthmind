@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERNAME=${KULADO_USERNAME:-user1@havengrc.com}
+USERNAME=${KULADO_USERNAME:-demo@wealthmind.net}
 PASSWORD=${KULADO_PASSWORD:-password}
 #SERVER=${1:-https://staging.havengrc.com}
 SERVER=${1:-http://localhost:2015}
